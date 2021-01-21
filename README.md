@@ -75,10 +75,12 @@ git clone https://gitlab.aws.dev/am3-app-modernization-gsp/ecs-event-based-scali
 Build the SQS consumer spring code using the following command:
 
 ```bash
-cd src
+cd src/sqs-consumer-spring
 mvn clean install
-cd ..
+cd ../..
 ```
+
+> Note: Source code for SQS consumer based on spring boot is available under `src\sqs-consumer-spring` folder
 
 ## Deploy
 
