@@ -1,0 +1,8 @@
+title Processing SQS message
+
+User->Input S3: New image file uploaded
+Input S3->SQS:S3 notification triggered with \nthe file details
+ECS Service-->SQS: Read message from queue
+ECS Service-->ECS Service: Wait for 5 seconds (artificial wait)
+ECS Service-->ECS Service: Generate thubnails
+ECS Service->Output S3: Upload generated thumbnails to S3
