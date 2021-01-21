@@ -56,7 +56,7 @@ export class EcsEventBasedScaling extends cdk.Construct {
       containerInsights: true,
     });
 
-    // Queue
+    // Queue [same queue name used inside spring container]
     const queue = new sqs.Queue(this, 'sqs-scaling-queue', {
       queueName: 'S3NotificationQueue',
     });
@@ -92,10 +92,6 @@ export class EcsEventBasedScaling extends cdk.Construct {
       memoryLimitMiB: 4096,
       cpu: 2048,
     });
-
-    console.log(path.resolve(__dirname,
-      'sqs-consumer-spring',
-    ));
 
     // Default container
     const containerDefinition = taskDefinition.addContainer('sqs-scaling-container', {

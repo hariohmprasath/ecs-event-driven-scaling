@@ -93,6 +93,8 @@ As the code is created as a CDK construct, the following parameters can be custo
 | minInstances | Minimum number of instances for autoscaling | 1 |
 | maxInstances | Maximum number of instances for autoscaling | 10 |
 
+> Note: CDK Deploy will create a queue with a name `S3NotificationQueue` and spring boot consumer is configured to read messages from this queue. So any changes to queue name has to be made both on CDK script and spring boot application
+
 Code for the sample application using this construct is available in `src/integ.default.ts`. In order to deploy the application, first bootstrap a CDK environment (if you haven't done so already).
 
 ```bash
