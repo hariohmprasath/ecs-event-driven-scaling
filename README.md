@@ -69,7 +69,7 @@ Check out the code from this repository using this command:
 
 ```bash
 mkdir ecs-event-based-scaling && cd ecs-event-based-scaling
-git clone https://gitlab.aws.dev/am3-app-modernization-gsp/ecs-event-based-scaling.git .
+git clone https://github.com/hariohmprasath/ecs-event-driven-scaling.git .
 ```
 
 Build the SQS consumer spring code using the following command:
